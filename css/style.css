@@ -46,10 +46,11 @@ h1 {
 #h1Main {
     font-family: 'Playfair Display', serif;
     font-size: 80px;
-    line-height: 70px;
+    line-height: 100px;
     position: absolute;
-    left:0px;
-    top:220px;
+    left:-50px;
+    top:150px;
+    text-align: left;
 }
 
 h4 {
@@ -261,8 +262,9 @@ nav li a {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #444;
-    font-size: 11px;
+    font-size: 20px;
     font-weight: bold;
+    border:solid 2px black;
 }
 
 .bg-nav {
@@ -280,7 +282,8 @@ a:focus {
 }
 
 a:hover {
-    color: #425BB5;
+    //color: #425BB5;
+    color: blue;
     text-decoration: none;
 }
 
@@ -309,7 +312,7 @@ a.active {
     top:0;
     left:0;
     z-index:-1;
-    opacity: 0.5;
+    opacity: 0.6;
     background-repeat: no-repeat;
     background-size:100% 100%;
 }
