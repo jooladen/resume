@@ -37,9 +37,16 @@ font-family: 'Open Sans', sans-serif;
 ==================================================*/
 
 h1 {
-    //font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 80px;
-    //line-height: 70px;
+    line-height: 70px;
+    
+}
+
+#h1Main {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    line-height: 70px;
     position: absolute;
     left:0px;
     top:220px;
