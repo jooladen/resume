@@ -551,6 +551,108 @@
     <script src="js/jquery.validate.min.js"></script>
     <!-- main script -->
     <script src="js/custom.js"></script>
+
+    <!-- service popup -->
+    <div id="service-popup-overlay">
+        <div id="service-popup">
+            <div class="sp-header">
+                <button id="popup-close-btn" aria-label="닫기">✕</button>
+                <h2>🍉 먼저 만들어드립니다<br>마음에 들면 그때 결제하세요</h2>
+                <p>AI·바이브코딩 개발 &nbsp;·&nbsp; 경력 29년 &nbsp;·&nbsp; 결과 먼저, 계약 나중</p>
+            </div>
+            <div class="sp-body">
+
+                <div class="sp-hook">
+                    <p class="hook-title">🍉 수박 먼저 잘라드립니다. 달면 사세요.</p>
+                    <p>
+                        완성이 100이라면, <strong>핵심 기능 10%를 Vercel에 배포해드립니다.</strong><br>
+                        실제 URL로 접속해서 직접 써보세요.<br>
+                        쓸만하면 나머지 90% 진행 — 아니면 <strong>그냥 무료로 가져가세요.</strong><br>
+                        <br>
+                        저는 신규라 아직 리뷰가 없습니다. 그래서 먼저 드립니다.
+                    </p>
+                </div>
+
+                <div class="sp-process">
+                    <h4>진행 방식</h4>
+                    <div class="sp-steps">
+                        <div class="sp-step">
+                            <span class="step-num">①</span>
+                            <span class="step-txt">무료 상담<br>원하는 서비스<br>말씀해주세요</span>
+                        </div>
+                        <div class="sp-step">
+                            <span class="step-num">②</span>
+                            <span class="step-txt">기능 우선순위<br>TOP 10<br>함께 정하기</span>
+                        </div>
+                        <div class="sp-step">
+                            <span class="step-num">③</span>
+                            <span class="step-txt">10% 기능<br>Vercel 배포<br>(무료)</span>
+                        </div>
+                        <div class="sp-step">
+                            <span class="step-num">④</span>
+                            <span class="step-txt">URL 접속<br>직접 써보고<br>그다음 결정</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sp-error-card">
+                    <p><strong>🔧 AI 바이브코딩 오류 해결도 합니다</strong><br>
+                    ChatGPT·Cursor·Claude로 만든 코드 에러, 당일 진단·수정해드립니다.</p>
+                </div>
+
+                <div class="sp-price-row">
+                    <div class="sp-price-item">
+                        <p class="pl">단순 버그</p>
+                        <p class="pa">7만원</p>
+                        <p class="pd">당일</p>
+                    </div>
+                    <div class="sp-price-item featured">
+                        <p class="pl">버그 + 원인 문서</p>
+                        <p class="pa">20만원</p>
+                        <p class="pd">3일</p>
+                    </div>
+                    <div class="sp-price-item">
+                        <p class="pl">10기능 설계 + 구현</p>
+                        <p class="pa">50만원</p>
+                        <p class="pd">5일</p>
+                    </div>
+                </div>
+
+                <div class="sp-cta">
+                    <p class="cta-num">📞 010-4747-6479</p>
+                    <p class="cta-sub">전화 · 카톡 모두 가능 &nbsp;|&nbsp; 상담 무료 &nbsp;|&nbsp; 결과 먼저, 계약 나중</p>
+                </div>
+
+                <button id="popup-dismiss">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="service-fab" aria-label="서비스 안내 다시 보기">
+        🔧 AI 개발<br>상담 문의
+    </button>
+
+    <script>
+    (function () {
+        var overlay = document.getElementById('service-popup-overlay');
+        var fab = document.getElementById('service-fab');
+        function closePopup() {
+            overlay.style.display = 'none';
+            fab.style.display = 'block';
+        }
+        function openPopup() {
+            overlay.style.display = 'flex';
+            fab.style.display = 'none';
+        }
+        document.getElementById('popup-close-btn').addEventListener('click', closePopup);
+        document.getElementById('popup-dismiss').addEventListener('click', closePopup);
+        overlay.addEventListener('click', function (e) {
+            if (e.target === this) closePopup();
+        });
+        fab.addEventListener('click', openPopup);
+    })();
+    </script>
+    <!-- ./service popup -->
 </body>
 
 </html>

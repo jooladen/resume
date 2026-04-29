@@ -910,3 +910,146 @@ fieldset {
         font-size: 10px;
     }
 }
+
+
+/* ── service popup ──
+==================================================*/
+
+#service-popup-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 16px;
+}
+#service-popup {
+    background: #fff;
+    border-radius: 12px;
+    width: 100%; max-width: 620px;
+    max-height: 92vh; overflow-y: auto;
+    position: relative;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.45);
+}
+.sp-header {
+    background: #1a3a6a;
+    color: #fff;
+    padding: 26px 28px 22px;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+}
+.sp-header h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.35em; font-weight: 900;
+    margin: 0 36px 6px 0; color: #fff; line-height: 1.35;
+}
+.sp-header p { font-size: 0.83em; opacity: 0.82; margin: 0; }
+#popup-close-btn {
+    position: absolute; top: 16px; right: 16px;
+    background: rgba(255,255,255,0.18); border: none;
+    color: #fff; width: 30px; height: 30px;
+    border-radius: 50%; cursor: pointer;
+    font-size: 1em; line-height: 30px; text-align: center;
+    padding: 0;
+}
+#popup-close-btn:hover { background: rgba(255,255,255,0.32); }
+.sp-body { padding: 22px 28px; }
+
+/* 핵심 훅 박스 */
+.sp-hook {
+    background: #fffbea;
+    border: 2px solid #f5c842;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+}
+.sp-hook .hook-title {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.05em; font-weight: 900;
+    color: #7a5800; margin: 0 0 8px;
+}
+.sp-hook p { font-size: 0.88em; color: #5a4200; line-height: 1.7; margin: 0; }
+.sp-hook strong { color: #b34500; }
+
+/* 프로세스 */
+.sp-process { margin-bottom: 20px; }
+.sp-process h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em; letter-spacing: 1.2px;
+    text-transform: uppercase; color: #888;
+    margin: 0 0 12px; font-weight: 700;
+}
+.sp-process h4::before { display: none; }
+.sp-steps { display: flex; gap: 6px; }
+.sp-step {
+    flex: 1; text-align: center;
+    padding: 12px 6px;
+    background: #f5f8ff;
+    border-radius: 8px;
+    font-family: 'Lato', sans-serif;
+}
+.sp-step .step-num {
+    display: block; font-size: 1.2em;
+    font-weight: 900; color: #425BB5; margin-bottom: 4px;
+}
+.sp-step .step-txt { font-size: 0.75em; color: #555; line-height: 1.4; }
+
+/* 오류 해결 카드 */
+.sp-error-card {
+    background: #f0f7ff;
+    border-left: 3px solid #425BB5;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+}
+.sp-error-card p { font-size: 0.85em; color: #444; margin: 0; line-height: 1.6; }
+.sp-error-card strong { color: #1a3a6a; }
+
+/* 가격 */
+.sp-price-row { display: flex; gap: 8px; margin-bottom: 18px; }
+.sp-price-item {
+    flex: 1; text-align: center;
+    padding: 12px 6px; border: 1px solid #dde8ff; border-radius: 8px;
+}
+.sp-price-item.featured { border: 2px solid #425BB5; }
+.sp-price-item .pl { font-size: 0.7em; color: #888; margin-bottom: 4px; }
+.sp-price-item .pa { font-size: 1.2em; font-weight: 900; color: #1a3a6a; font-family: 'Lato', sans-serif; }
+.sp-price-item .pd { font-size: 0.72em; color: #888; }
+
+/* CTA 바 */
+.sp-cta {
+    background: #1a3a6a; color: #fff;
+    border-radius: 8px; padding: 18px; text-align: center; margin-bottom: 12px;
+}
+.sp-cta .cta-num { font-size: 1.5em; font-weight: 900; font-family: 'Lato', sans-serif; letter-spacing: 1px; }
+.sp-cta .cta-sub { font-size: 0.8em; opacity: 0.8; margin-top: 4px; }
+#popup-dismiss {
+    display: block; width: 100%; padding: 10px;
+    background: #eee; border: none; border-radius: 6px;
+    cursor: pointer; font-family: 'Lato', sans-serif;
+    font-size: 0.86em; color: #666;
+}
+#popup-dismiss:hover { background: #ddd; }
+
+/* FAB */
+#service-fab {
+    position: fixed; bottom: 24px; right: 24px;
+    z-index: 9999;
+    background: #1a3a6a; color: #fff;
+    border: none; border-radius: 50px;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.88em; font-weight: 700;
+    box-shadow: 0 4px 18px rgba(26,58,106,0.45);
+    display: none;
+    line-height: 1.4;
+    text-align: center;
+}
+#service-fab:hover { background: #14305a; }
+
+@media (max-width: 520px) {
+    .sp-steps { flex-direction: column; }
+    .sp-price-row { flex-direction: column; }
+    .sp-body { padding: 18px 16px; }
+    .sp-header { padding: 20px 16px 18px; }
+}
