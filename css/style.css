@@ -1022,6 +1022,10 @@ fieldset {
 }
 .sp-cta .cta-num { font-size: 1.5em; font-weight: 900; font-family: 'Lato', sans-serif; letter-spacing: 1px; }
 .sp-cta .cta-sub { font-size: 0.8em; opacity: 0.8; margin-top: 4px; }
+.sp-dismiss-hint {
+    text-align: center; font-size: 0.8em; color: #888;
+    line-height: 1.7; margin-bottom: 10px;
+}
 #popup-dismiss {
     display: block; width: 100%; padding: 10px;
     background: #eee; border: none; border-radius: 6px;
