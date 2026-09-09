@@ -1,14 +1,25 @@
 {
   "version": "1.0",
-  "enabled": false,
+  "enabled": true,
   "teamName": "",
   "feature": "",
   "pdcaPhase": "plan",
   "orchestrationPattern": "leader",
   "ctoAgent": "opus",
-  "startedAt": "2026-04-23T08:49:33.227Z",
-  "lastUpdated": "2026-04-23T09:11:18.578Z",
-  "teammates": [],
+  "startedAt": "2026-04-29T03:16:19.397Z",
+  "lastUpdated": "2026-04-29T03:16:37.336Z",
+  "teammates": [
+    {
+      "name": "a643818b1ff9c6a80",
+      "role": "Explore",
+      "model": "sonnet",
+      "status": "completed",
+      "currentTask": null,
+      "taskId": null,
+      "startedAt": "2026-04-29T03:16:19.401Z",
+      "lastActivityAt": "2026-04-29T03:16:37.333Z"
+    }
+  ],
   "progress": {
     "totalTasks": 0,
     "completedTasks": 0,
@@ -17,5 +28,5 @@
     "pendingTasks": 0
   },
   "recentMessages": [],
-  "sessionId": "7cc0817b-fde1-4f8f-9abe-5e70b0292ee5"
+  "sessionId": "d9772ecd-12b0-4a56-8e65-ef02a968f13c"
 }
